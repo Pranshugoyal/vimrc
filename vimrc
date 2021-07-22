@@ -5,10 +5,16 @@ source ~/.vim/pluginInit.vim
 call NetrwConfig()
 colorscheme monochrome
 set number relativenumber
-set ruler showcmd
-set wildmenu
 set noequalalways scrolloff=2 signcolumn=number
 set secure exrc 
+
+if has('nvim')
+	set noincsearch nohlsearch
+	set guicursor=n-v-c-i-ci-ve:ver25,r-cr:hor20,o:hor50
+else
+	set ruler showcmd
+	set wildmenu
+endif
 
 filetype plugin on
 
