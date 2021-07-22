@@ -28,6 +28,10 @@ function PackageManagerInit()
 	"Debug support
 	call minpac#add('puremourning/vimspector', {'type': 'opt'})
 
+	"Nvim specific tree-sitter plugins
+	call minpac#add('nvim-treesitter/nvim-treesitter-textobjects', {'type': 'opt'})
+	call minpac#add('nvim-treesitter/nvim-treesitter', {'type': 'opt'})
+
 	call minpac#update()
 endfunction
 
@@ -54,3 +58,10 @@ function NetrwConfig()
 	let g:netrw_altv = 1
 	let g:netrw_winsize = 13
 endfunction
+
+if has('nvim')
+    function TreeSitterTurnOn()
+        packadd nvim-treesitter
+        lua require('treesitter-config')
+    endfunction
+endif
