@@ -31,6 +31,10 @@ com! EditFTPlugin exe 'e ~/.vim/after/ftplugin/' . &filetype . '.vim'
 com! Sonokai exe 'call SonokaiLoad()'
 com! Drawer exe '35vs . | wincmd l'
 
+if &diff
+	call PluginSetupvimgitgutter()
+endif
+
 augroup CursorLineOnlyInActiveWindow
 	autocmd!
 	autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline

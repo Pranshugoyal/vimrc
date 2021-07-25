@@ -59,6 +59,12 @@ function NetrwConfig()
 	let g:netrw_winsize = 13
 endfunction
 
+function PluginSetupvimgitgutter()
+	set updatetime=100
+	highlight GitGutterAdd ctermfg=203
+	packadd vim-gitgutter
+endfunction
+
 if has('nvim')
     function TreeSitterTurnOn()
         packadd nvim-treesitter
