@@ -37,7 +37,6 @@ let s:palette = {
       \ 'fade'       : [245, '#8a8a8a'],
       \ 'fade-more'  : [238, '#444444'],
       \ 'highlight-bg': [234, '#1c1c1c'],
-      \ 'highlight'  : [230, '#ffffd7'],
       \ 'attention'  : [224, '#ffd7d7'],
       \ 'standout'   : [226, '#ffff00'],
       \ 'error'      : [203, '#ff5f5f'],
@@ -130,7 +129,7 @@ call s:Defn('StatusLineTermNC', s:fg('attention'), s:bg('fade-more'))
 call s:Defn('Visual', s:attr('reverse'))
 call s:Defn('MatchParen', s:fg('attention'), s:bg('fade-more'))
 
-call s:Defn('Title', s:fg('highlight'))  " titles for output from ':set all', ':autocmd' etc.
+call s:Defn('Title', s:fg('attention'))  " titles for output from ':set all', ':autocmd' etc.
 call s:Link('Question', 'Title')
 call s:Link('MoreMsg', 'Title')
 call s:Link('IncSearch', 'Title')
@@ -140,10 +139,10 @@ call s:Link('WildMenu', 'Search')
 call s:Defn('WarningMsg', s:fg('attention'))
 call s:Defn('ErrorMsg', s:fg('error'))
 
-call s:Defn('Pmenu', s:bg('fade-more'))
-call s:Defn('PMenuSel', s:fg('highlight'), s:bg('fade'))
-call s:Defn('PMenuSbar', s:fg('fade'), s:bg('fade'))
-call s:Defn('PMenuThumb', s:fg('fade'), s:bg('highlight'))
+call s:Defn('Pmenu', s:bg('highlight-bg'))
+call s:Defn('PMenuSel', s:fg('standout'), s:bg('background'))
+call s:Defn('PMenuSbar', s:fg('fade-more'), s:bg('fade-more'))
+call s:Defn('PMenuThumb', s:fg('highlight-bg'), s:bg('fade'))
 
 call s:Defn('SpellBad', s:fg('error'), s:attr('italic'))
 call s:Link('SpellCap', 'Underlined')
@@ -151,7 +150,7 @@ call s:Link('SpellLocal', 'SpellCap')
 call s:Link('SpellRare', 'SpellCap')
 
 call s:Defn('Folded', s:fg('fade'), s:bg('background'))
-call s:Defn('FoldColumn', s:fg('highlight'), s:bg('fade-more'))
+call s:Defn('FoldColumn', s:fg('fade-more'), s:bg('background'))
 
 call s:Defn('DiffAdd', s:bg('highlight-bg'))
 call s:Defn('DiffChange', s:bg('highlight-bg'))
@@ -160,6 +159,7 @@ call s:Defn('DiffText', s:bg('background'), s:fg('standout'))
 
 " QuickFix
 call s:Defn('qfFileName', s:fg('fade'))
+call s:Defn('SignColumn', s:fg('fade-more'), s:bg('background'))
 
 """"
 """ Unmodified groups from default group names list.
