@@ -11,6 +11,7 @@ set secure exrc
 if has('nvim')
 	set noincsearch nohlsearch
 	set guicursor=n-v-c-i-ci-ve:ver25-blinkon100,r-cr:hor20,o:hor50
+    tnoremap <Esc> <C-\><C-n>
 else
 	set ruler showcmd
 	set wildmenu
