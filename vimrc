@@ -24,7 +24,7 @@ nnoremap Y y$
 set ignorecase
 set clipboard=unnamed
 set whichwrap+=<,>,h,l
-set  completeopt+=noselect
+set completeopt+=noselect
 set smartindent tabstop=4 shiftwidth=4
 
 com! EditFTPlugin exe 'e ~/.vim/after/ftplugin/' . &filetype . '.vim'
