@@ -1,5 +1,6 @@
 
-source ~/.vim/pluginInit.vim
+let $VIMHOME = $HOME."/.vim"
+exec "source ".$VIMHOME."/pluginInit.vim"
 
 "UI Settings
 call NetrwConfig()
