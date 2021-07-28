@@ -17,6 +17,8 @@ vim $(git diff --name-only --diff-filter=U)
 :ownsyntax allows setting syntax highlight for individual windows selectively
 & repeats last substitution on current line
 Use quickfix/location lists to perform global actions. copen/lopen
+Quit takes a count parameter, [n] indicates nth window, [+-n] indicates relative to current window
+Line commands or operators act on the entire text represented by a fold line!
 
 netrw tips:
     - I: toggle top banner
