@@ -25,13 +25,13 @@ set mouse=i
 nnoremap Y y$
 set ignorecase
 set clipboard=unnamed
-set whichwrap+=<,>,h,l
+set whichwrap+=<,>,[,]
 set completeopt+=noselect
 set smartindent tabstop=4 shiftwidth=4
 
 com! EditFTPlugin exe 'e ~/.vim/after/ftplugin/' . &filetype . '.vim'
 com! Sonokai exe 'call SonokaiLoad()'
-com! Drawer exe '35vs . | wincmd l'
+com! -nargs=? -bar Drawer :<args>vs . | wincmd l
 
 if &diff
 	call PluginSetupvimgitgutter()
