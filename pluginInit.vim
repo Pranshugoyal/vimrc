@@ -49,6 +49,8 @@ function SyntasticLoad()
 	let g:syntastic_always_populate_loc_list = 1
 	let g:syntastic_error_symbol = "\u2717"
 	let g:syntastic_warning_symbol = "\u26A0"
+    highlight link SyntasticErrorLine error
+    highlight link SyntasticErrorSign error
 	packadd syntastic
 endfunction
 
