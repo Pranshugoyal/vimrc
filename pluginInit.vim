@@ -32,6 +32,10 @@ function PackageManagerInit()
 	call minpac#add('nvim-treesitter/nvim-treesitter-textobjects', {'type': 'opt'})
 	call minpac#add('nvim-treesitter/nvim-treesitter', {'type': 'opt'})
 
+	call minpac#add('nvim-lua/popup.nvim', {'type': 'opt'})
+	call minpac#add('nvim-lua/plenary.nvim', {'type': 'opt'})
+	call minpac#add('nvim-telescope/telescope.nvim', {'type': 'opt'})
+
 	call minpac#update()
 endfunction
 
@@ -72,4 +76,10 @@ if has('nvim')
         packadd nvim-treesitter
         lua require('treesitter-config')
     endfunction
+
+	function PluginSetupTelescope()
+		packadd telescope.nvim
+		packadd plenary.nvim
+		packadd popup.nvim
+	endfunction
 endif
