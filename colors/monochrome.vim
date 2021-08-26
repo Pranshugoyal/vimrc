@@ -116,6 +116,7 @@ call s:Defn('Normal', s:fg('foreground'), s:bg('background'))
 
 call s:Defn('SpecialKey', s:fg('fade'))
 call s:Defn('NonText', s:fg('fade-more'))
+call s:Defn('EndOfBuffer', s:fg('background'))
 call s:Link('LineNr', 'NonText')
 call s:Link('CursorLineNr', 'SpecialKey')
 call s:Defn('CursorLine', s:fg('attention'), s:bg('highlight-bg'))
@@ -160,6 +161,9 @@ call s:Defn('DiffText', s:bg('background'), s:fg('standout'))
 " QuickFix
 call s:Defn('qfFileName', s:fg('fade'))
 call s:Defn('SignColumn', s:fg('fade-more'), s:bg('background'))
+
+" Netrw highlights
+call s:Defn('Directory', s:fg('foreground'), s:bg('background'))
 
 """"
 """ Unmodified groups from default group names list.
