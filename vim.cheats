@@ -11,6 +11,7 @@ ctrl-Z to suspend vim session and back to originating terminal, fg<enter> to com
 :browse oldfiles- allows to open files from recent files
 :set nowrapscan to turn off search wrapping
 :set wrap linebreak to wrap lines at word boundries
+:set breakindent (bri) to have wrapped lines follow same indent level
 each vim exit saves its position in a mark 0 register
 read input from STDIN by using "vim -" as command: ls | vim -
 vim $(git diff --name-only --diff-filter=U)
@@ -19,6 +20,7 @@ vim $(git diff --name-only --diff-filter=U)
 Use quickfix/location lists to perform global actions. copen/lopen
 Quit takes a count parameter, [n] indicates nth window, [+-n] indicates relative to current window
 Line commands or operators act on the entire text represented by a fold line!
+'' takes you back to last position after a motion command. Handy in case of yank up
 
 netrw tips:
     - I: toggle top banner
